@@ -1,11 +1,6 @@
 apply plugin: 'com.android.application'
+apply plugin: 'com.xiachufang.manifest.exported'
 
-def getAppName() {
-    if ('release' == rootProject.ext.app.serverEnviroment) {
-        return 'sdkBuild'
-    }
-    return 'sdkBuild'
-}
 
 android {
     compileSdkVersion 33
