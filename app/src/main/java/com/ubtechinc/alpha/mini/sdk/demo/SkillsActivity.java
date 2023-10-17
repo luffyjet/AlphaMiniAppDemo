@@ -3,7 +3,6 @@ package com.ubtechinc.alpha.mini.sdk.demo;
 import android.os.Bundle;
 import android.util.Log;
 
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
@@ -17,7 +16,7 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.List;
 
-public class SkillsActivity extends AppCompatActivity {
+public class SkillsActivity extends BaseActivity {
 
     private ActivitySkillsBinding binding;
 

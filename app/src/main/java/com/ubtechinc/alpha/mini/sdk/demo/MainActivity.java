@@ -3,14 +3,13 @@ package com.ubtechinc.alpha.mini.sdk.demo;
 import android.content.Intent;
 import android.os.Bundle;
 
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
 import com.ubtechinc.alpha.mini.sdk.AlphaMiniSdk;
 import com.ubtechinc.alpha.mini.sdk.demo.databinding.ActivityMainBinding;
 import com.ubtechinc.alpha.mini.sdk.exceptions.AlphaMiniException;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseActivity {
 
     private ActivityMainBinding binding;
 
