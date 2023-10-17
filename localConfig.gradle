@@ -1,0 +1,123 @@
+ext {
+
+    kotlin_version = '1.3.50'
+    gradle_version = '3.5.1'
+    extractor_gradle_version = '4.9.1'
+
+
+    androidSupportVersion = [
+            supportVer :  "28.0.0",
+            constraintLayout: "1.1.2",
+            lifecycle:"1.1.1",
+            roomVersion: "1.1.1",
+            pageVersion: "1.0.1",
+            testRunnerVersion: "1.0.2",
+            testEspressoCoreVersion: "3.0.2",
+            testJunitVersion:"4.12",
+    ]
+
+    thirdSupprotVersion = [
+            rxJavaVersion : "2.2.4",
+            rxAndroidVersion : "2.1.0",
+            rxKotlin: "2.3.0",
+            rxBinding:"2.0.0",
+
+            retrofitVersion : "2.3.0",
+            okhttpVersion : "3.4.2",
+            okioVersion : "1.11.0",
+
+            hugoVersion : "1.2.1",
+            timberVersion : "4.5.1",
+
+            daggerVersion : "2.9",
+
+            mockitoVersion : "1.10.19",
+            robolectricVersion : "3.0",
+            hamcrestVersion : "1.3",
+            guavaVer : "19.0",
+            protobuflite : "3.0.1",
+            protobufjava : "3.4.0",
+            eventbus: "3.0.0",
+
+            glide: "4.7.1",
+            workManger:"1.0.0-alpha10",
+            arouterApi: "1.4.1",
+            arouterCompiler: "1.2.2",
+            powermockVersion:"2.0.0",
+            tvsVer          : "2.1.3",
+    ]
+
+
+
+    deps = [
+            //-------------------------------Android -----------------------------
+            supportV4 : 'androidx.legacy:legacy-support-v4:1.0.0',
+            design : 'com.google.android.material:material:1.0.0',
+            cardviewV7 : "com.android.support:cardview-v7:${androidSupportVersion.supportVer}",
+            supportAnnotations: 'androidx.annotation:annotation:1.0.0',
+            palette: 'androidx.palette:palette:1.0.0',
+            animateVector: "com.android.support:animated-vector-drawable:${androidSupportVersion.supportVer}",
+            mediaCompat: 'androidx.media:media:1.0.0',
+
+            //包含了ViewModel and LiveData
+            lifecycleExtensions: 'androidx.lifecycle:lifecycle-extensions:2.0.0',
+            lifecycleCompiler: 'androidx.lifecycle:lifecycle-compiler:2.0.0',
+            lifecycleRuntime: 'androidx.lifecycle:lifecycle-runtime:2.0.0',
+
+            lifecycleCore:"android.arch.lifecycle:livedata-core:${androidSupportVersion.lifecycle}",
+            lifecycleViewmodel:"android.arch.lifecycle:viewmodel:${androidSupportVersion.lifecycle}",
+            lifecycleCommonJava8:"android.arch.lifecycle:common-java8:${androidSupportVersion.lifecycle}",
+
+            rxJava : "io.reactivex.rxjava2:rxjava:${thirdSupprotVersion.rxJavaVersion}",
+            rxAndroid : "io.reactivex.rxjava2:rxandroid:${thirdSupprotVersion.rxAndroidVersion}",
+            rxKotlin: "io.reactivex.rxjava2:rxkotlin:${thirdSupprotVersion.rxKotlin}",
+
+            roomRuntime : 'androidx.room:room-runtime:2.0.0',
+            roomAnnotationProcessor : 'androidx.room:room-compiler:2.0.0',
+
+            testRunner: 'androidx.test.ext:junit:1.1.1',
+            testEspressoCore: 'androidx.test.espresso:espresso-core:3.1.0',
+            testJunit:"junit:junit:${androidSupportVersion.testJunitVersion}",
+            daggerAndroidSupport: "com.google.dagger:dagger-android-support:2.22",
+            daggerAndroidProcessor: "com.google.dagger:dagger-android-processor:2.22",
+            //--------------------------------ProtocolBuffer-------------------------
+            protobufLava : "com.google.protobuf:protobuf-java:${thirdSupprotVersion.protobufjava}",
+            eventbus : "org.greenrobot:eventbus:${thirdSupprotVersion.eventbus}",
+            //--------------------------------google Guava-------------------------
+            guava : "com.google.guava:guava:${thirdSupprotVersion.guavaVer}",
+
+            //--------------------------------retrofit/http3/io-----------------------------
+            retrofit2 : "com.squareup.retrofit2:retrofit:${thirdSupprotVersion.retrofitVersion}",
+            retrofit_gson : "com.squareup.retrofit2:converter-gson:${thirdSupprotVersion.retrofitVersion}",
+            rx_retrofit : "com.squareup.retrofit2:adapter-rxjava2:${thirdSupprotVersion.retrofitVersion}",
+            okhttp : "com.squareup.okhttp3:okhttp:${thirdSupprotVersion.okhttpVersion}",
+            //-----------------------------------dagger------------------------------------------
+            dagger : "com.google.dagger:dagger:${thirdSupprotVersion.daggerVersion}",
+            daggerAndroid: "com.google.dagger:dagger-android:${thirdSupprotVersion.daggerVersion}",
+            dagger_compiler : "com.google.dagger:dagger-compiler:${thirdSupprotVersion.daggerVersion}",
+
+            //------------------------------------图片加载---------------------------
+            glide :"com.github.bumptech.glide:glide:${thirdSupprotVersion.glide}",
+            webpdecoder: "com.zlc.glide:webpdecoder:0.0.8.${thirdSupprotVersion.glide}",
+            openBeans: 'com.googlecode:openbeans:1.0',
+            //-----------------------------Dex分包-----------------------
+            multidex: 'androidx.multidex:multidex:2.0.0',
+            //---------------------------json解析------------------------
+            gson:'com.google.code.gson:gson:2.7',
+            fastjson:'com.alibaba:fastjson:1.2.54',
+            //-----------------------------rxBinding---------------------------------
+
+            rxbinding :"com.jakewharton.rxbinding2:rxbinding:${thirdSupprotVersion.rxBinding}",
+            //-----------------------------ARouter-----------------------------------
+            ARouterApi:"com.alibaba:arouter-api:${thirdSupprotVersion.arouterApi}",
+            ARouterCompiler:"com.alibaba:arouter-compiler:${thirdSupprotVersion.arouterCompiler}",
+
+            //--------------------------Kotlin相关--------------------------------------------
+            kotlinStdlib:"org.jetbrains.kotlin:kotlin-stdlib-jdk8:${rootProject.kotlin_version}",
+            kotlinReflect:"org.jetbrains.kotlin:kotlin-reflect:${rootProject.kotlin_version}",
+
+            zxing:'com.google.zxing:core:3.3.3',
+    ]
+}
+
+

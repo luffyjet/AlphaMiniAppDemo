@@ -1,0 +1,26 @@
+[
+  {
+    "skillPath": "/speechactor/laugh",
+    "name": "laugh"
+  },
+  {
+    "skillPath": "/speechactor/welcome",
+    "name": "welcome"
+  },
+  {
+    "skillPath": "/speechactor/stoop",
+    "name": "bend"
+  },
+  {
+    "skillPath": "/speechactor/bow_step",
+    "name": "bow step"
+  },
+  {
+    "skillPath": "/speechactor/sneeze",
+    "name": "sneeze"
+  },
+  {
+    "skillPath": "/speechactor/dancing",
+    "name": "dancing"
+  }
+]

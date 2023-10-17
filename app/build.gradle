@@ -1,0 +1,117 @@
+apply plugin: 'com.android.application'
+
+def getAppName() {
+    if ('release' == rootProject.ext.app.serverEnviroment) {
+        return 'sdkBuild'
+    }
+    return 'sdkBuild'
+}
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "29.0.3"
+    defaultConfig {
+        applicationId "com.ubtechinc.alpha.mini.sdk.demo"
+        minSdkVersion 21
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [AROUTER_MODULE_NAME: project.getName()]
+            }
+        }
+
+        ndk {
+            abiFilters "armeabi-v7a", "arm64-v8a"
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    repositories {
+        flatDir {
+            dirs 'libs'
+        }
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+
+    dataBinding {
+        enabled = true
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    testImplementation rootProject.ext.deps.testJunit
+    androidTestImplementation rootProject.ext.deps.testRunner
+    androidTestImplementation rootProject.ext.deps.testEspressoCore
+
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+
+    configurations.all {
+        resolutionStrategy.force 'androidx.appcompat:appcompat:1.2.0'
+        implementation 'androidx.recyclerview:recyclerview:1.1.0'
+        resolutionStrategy.force 'androidx.constraintlayout:constraintlayout:2.0.4'
+    }
+
+    implementation rootProject.ext.deps.rxbinding
+    implementation rootProject.ext.deps.kotlinStdlib
+    implementation rootProject.ext.deps.kotlinReflect
+
+    implementation(rootProject.ext.deps.ARouterApi) {
+        exclude group: 'com.android.support', module: 'support-media-compat'
+    }
+    implementation rootProject.ext.deps.protobufLava
+    implementation rootProject.ext.deps.multidex
+    implementation rootProject.ext.deps.roomRuntime
+    implementation rootProject.ext.deps.supportAnnotations
+    implementation rootProject.ext.deps.lifecycleExtensions
+    implementation rootProject.ext.deps.lifecycleRuntime
+    implementation rootProject.ext.deps.mediaCompat
+    implementation rootProject.ext.deps.palette
+    implementation rootProject.ext.deps.openBeans
+
+    implementation rootProject.ext.deps.dagger
+    implementation rootProject.ext.deps.daggerAndroid
+    implementation rootProject.ext.deps.fastjson
+
+
+    implementation rootProject.ext.deps.eventbus
+    implementation rootProject.ext.deps.guava
+    implementation rootProject.ext.deps.zxing
+    implementation rootProject.ext.deps.glide
+    implementation rootProject.ext.deps.webpdecoder
+
+    implementation rootProject.ext.deps.retrofit2
+    implementation rootProject.ext.deps.retrofit_gson
+    implementation rootProject.ext.deps.rx_retrofit
+    implementation rootProject.ext.deps.rxAndroid
+    implementation rootProject.ext.deps.okhttp
+
+
+    compile(name: 'alpha-mini-oversea-edu-sdk-0.0.2', ext: 'aar')
+}
+
+
+task hello {
+    doLast {
+        println 'Hello world!'
+    }
+}
