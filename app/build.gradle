@@ -8,12 +8,12 @@ def getAppName() {
 }
 
 android {
-    compileSdkVersion 30
-    buildToolsVersion "29.0.3"
+    compileSdkVersion 33
+
     defaultConfig {
         applicationId "com.ubtechinc.alpha.mini.sdk.demo"
         minSdkVersion 21
-        targetSdkVersion 30
+        targetSdkVersion 33
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
@@ -61,13 +61,13 @@ dependencies {
     androidTestImplementation rootProject.ext.deps.testRunner
     androidTestImplementation rootProject.ext.deps.testEspressoCore
 
-    implementation 'androidx.appcompat:appcompat:1.2.0'
-    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+    implementation 'androidx.appcompat:appcompat:1.4.2'
+    implementation 'androidx.recyclerview:recyclerview:1.2.1'
     implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
 
     configurations.all {
-        resolutionStrategy.force 'androidx.appcompat:appcompat:1.2.0'
-        implementation 'androidx.recyclerview:recyclerview:1.1.0'
+        resolutionStrategy.force 'androidx.appcompat:appcompat:1.4.2'
+        implementation 'androidx.recyclerview:recyclerview:1.2.1'
         resolutionStrategy.force 'androidx.constraintlayout:constraintlayout:2.0.4'
     }
 
@@ -106,7 +106,7 @@ dependencies {
     implementation rootProject.ext.deps.okhttp
 
 
-    compile(name: 'alpha-mini-oversea-edu-sdk-0.0.2', ext: 'aar')
+    compile(name: 'alpha-mini-oversea-edu-sdk-0.0.9', ext: 'aar')
 }
 
 
